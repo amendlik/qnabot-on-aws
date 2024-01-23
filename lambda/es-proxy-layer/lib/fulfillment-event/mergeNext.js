@@ -21,7 +21,7 @@ function mergeNext(hit1, hit2) {
     qnabot.debug('Merge chained items');
     // merge plaintext answer
     if (hit1 && hit1.a) {
-        hit2.a = hit1.a + hit2.a;
+        hit2.a = hit1.a + ' ' + hit2.a;
     }
     // merge markdown, if present in both items
     const md1 = _.get(hit1, 'alt.markdown');
